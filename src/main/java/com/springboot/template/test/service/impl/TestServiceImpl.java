@@ -1,5 +1,7 @@
 package com.springboot.template.test.service.impl;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.springboot.template.comm.dao.BaseDao;
 import com.springboot.template.test.dao.TestDao;
 import com.springboot.template.test.pojo.Test;
@@ -19,8 +21,11 @@ public class TestServiceImpl implements TestService {
     private TestDao testDao;
 
 
-    public List<Test> getList(){
-        return baseDao.getList("testMapper.getList",null);
+    public PageInfo<Test> getList(){
+        PageHelper.startPage(1,30);
+        List<Test> list = baseDao.getList("testMapper.getList", null);
+        PageInfo<Test> pageInfo = new PageInfo<>(list);
+        return pageInfo;
     }
 
 }

@@ -1,5 +1,6 @@
 package com.springboot.template.test.controller;
 
+import com.github.pagehelper.PageInfo;
 import com.springboot.template.test.pojo.Test;
 import com.springboot.template.test.service.TestService;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,7 +16,7 @@ public class TestController {
     private TestService testService;
 
     @RequestMapping("test")
-    public List<Test> test(){
+    public PageInfo<Test> test(){
         return testService.getList();
     }
 }

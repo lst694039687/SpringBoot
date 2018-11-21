@@ -5,7 +5,7 @@
 <!-- 设备配置 -->
 <mapper namespace="testMapper">
     <select id="getList" resultType="com.springboot.template.test.pojo.Test">
-        select * from akk;
+        select * from akk
     </select>
 
 </mapper>

@@ -12,19 +12,7 @@ import java.util.List;
  * 
  * <p>
  * Title:Dao操作的基类  基于泛型查询
- * </p> 
- * <p>
- * Description::
- * </p> 
- * <p>
- * Author: 李尧   2013-8-22  上午10:47:26
- * </p> 
- * <p>
- *  
- * </p> 
-  * <p>
- * Copyright: @2013 李尧
- * </p> 
+ * </p>
  *
  */
 @Repository
