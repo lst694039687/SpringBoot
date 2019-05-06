@@ -6,9 +6,9 @@ server:
 spring:
     datasource:
         name: test
-        url: jdbc:mysql://127.0.0.1:3306/kdc
+        url: jdbc:mysql://127.0.0.1:3306/cannengutils
         username: root
-        password: 1234
+        password: canneng1122
         # 使用druid数据源
         type: com.alibaba.druid.pool.DruidDataSource
         driver-class-name: com.mysql.jdbc.Driver
@@ -26,8 +26,11 @@ spring:
         poolPreparedStatements: true
         maxOpenPreparedStatements: 20
 
+    mvc:
+      static-path-pattern: /**
+
 mybatis:
-  mapper-locations: classpath:/com/springboot/template/*/mapper/*.xml
+  mapper-locations: classpath:mapper/*Mapper.xml
   type-aliases-package: com.springboot.template.*.pojo
 
 
